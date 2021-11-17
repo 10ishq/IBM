@@ -33,9 +33,9 @@ def postData(jsonData):
     import json
     data = bodyData
     body = str.encode(json.dumps(data))
-    url = 'https://ussouthcentral.services.azureml.net/workspaces/fd6af8dd36714712848db07655d91ba2/services/077a9a1ac4c54772bd42fb9a80ef39f9/execute?api-version=2.0&format=swagger'
+    url = 'https://us-south.ml.cloud.ibm.com/ml/v4/deployments/5cb389b5-44ea-401d-9fdd-c4d18818c3c8/predictions?version=2021-11-17'
     api_key = 'abc123' # Replace this with the API key for the web service
-    headers = {'Content-Type':'application/json', 'Authorization':('Bearer v1XxSCYFLyDZN1mmreAClokU2eCFaVAVH03mFitPkcxOnjx6lqoZ0kFBFiSxMMT8wRMjLwkh1KhcjPJDGEHTNA==')}
+    headers = {'Content-Type':'application/json', 'Authorization':('Bearer https://us-south.ml.cloud.ibm.com/ml/v4/deployments/5cb389b5-44ea-401d-9fdd-c4d18818c3c8/predictions?version=2021-11-17')}
     req = urllib.request.Request(url, body, headers)
     try:
         response = urllib.request.urlopen(req)
